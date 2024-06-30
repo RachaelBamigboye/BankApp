@@ -15,7 +15,17 @@ backgroundColor: ['#0747b6', '#2265d8', '#2f91fa']
     ],
     labels: ['Bank 1', 'Bank 2', 'Bank 3']
     }
-  return <Doughnut data={data} />
+  return <Doughnut 
+  data={data}
+  options={{
+    cutout: '60%',
+    plugins: {
+        legend: {
+            display: false
+        }
+    }
+  }} 
+  />
 }
 
 export default DoughnutChart
